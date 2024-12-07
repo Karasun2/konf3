@@ -26,13 +26,15 @@ def parse_config(input_text):
             constants[name] = value.strip()
             continue
         
-        const_eval_match = re.match(r'(\w+)\s*=\s*\[(\w+)\]', line)
+        const_eval_match = re.match(r'(\w+)\s*=\s*\[(.+?)\]', line)  # Обновленное регулярное выражение
         if const_eval_match:
             name = const_eval_match.group(1)
-            if name in constants:
-                output_lines.append(f"{"    " * len(dict_stack)}{name} = {constants[name]}")
+            value = const_eval_match.group(2)
+            # Проверяем, существует ли константа
+            if value in constants:
+                output_lines.append(f"{'    ' * len(dict_stack)}{name} = {constants[value]}")
             else:
-                print(f"Ошибка: Константа '{name}' не объявлена.")
+                print(f"Ошибка: Константа '{value}' не объявлена.")
             continue
         
         dict_match = re.match(r'"(\w+)"\s+=\s+@\{', line)

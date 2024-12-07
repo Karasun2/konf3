@@ -1,10 +1,18 @@
 
-[settings]
+[main]
 
-    app_name = "MyApp"
-    version = "1.0.0"
+    xaa = 10
+    key3 = "value3"
 
-[log]
+    [sub_dict]
 
-    level = "debug"
-    file = "app.log"
+        key1 = "value1"
+        key2 = "value2"
+
+[another_dict]
+
+    y = 20
+
+    [nested_dict]
+
+        nested_key1 = "nested_value1"
