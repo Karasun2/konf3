@@ -1,7 +1,7 @@
 
 [main]
 
-    xaa = 10
+    x = 10
     key3 = "value3"
 
     [sub_dict]
