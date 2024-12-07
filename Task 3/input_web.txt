@@ -1,0 +1,12 @@
+
+% Конфигурация веб-сервера
+% Максимальное число соединений - константа
+max_connections is 1000;
+"web_server" = @{
+    % Основные настройки сервера
+    host = "localhost";
+    port = 8080;
+    timeout = 30;
+    max_connections = [max_connections]
+    % Настройки безопасности
+}

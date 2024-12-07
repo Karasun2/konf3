@@ -1,0 +1,5 @@
+[web_server]
+host = "localhost"
+port = 8080
+timeout = 30
+max_connections = 1000

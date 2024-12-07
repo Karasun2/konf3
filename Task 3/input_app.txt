@@ -1,0 +1,9 @@
+% Настройки приложения
+app_name is "MyApp";
+version is "1.0.0";
+
+% Настройки логирования
+log = @{
+    level = "debug";
+    file = "app.log";
+};
