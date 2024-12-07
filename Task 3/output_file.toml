@@ -1,5 +1,10 @@
-[web_server]
-host = "localhost"
-port = 8080
-timeout = 30
-max_connections = 1000
+
+[settings]
+
+    app_name = "MyApp"
+    version = "1.0.0"
+
+[log]
+
+    level = "debug"
+    file = "app.log"

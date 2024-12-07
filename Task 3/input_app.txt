@@ -2,8 +2,13 @@
 app_name is "MyApp";
 version is "1.0.0";
 
+"settings" = @{
+    app_name = [app_name]
+    version = [version]
+}
+
 % Настройки логирования
-log = @{
+"log" = @{
     level = "debug";
     file = "app.log";
-};
+}

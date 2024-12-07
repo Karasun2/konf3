@@ -1,12 +1,25 @@
+% Это комментарий
+x is 10;
+y is 20;
 
-% Конфигурация веб-сервера
-% Максимальное число соединений - константа
-max_connections is 1000;
-"web_server" = @{
-    % Основные настройки сервера
-    host = "localhost";
-    port = 8080;
-    timeout = 30;
-    max_connections = [max_connections]
-    % Настройки безопасности
+"main" = @{
+    x = [x]
+    key3 = "value3";
+    "sub_dict" = @{
+        key1 = "value1";
+        key2 = "value2";
+    }
+}
+
+/+ 
+    Это
+    тоже
+    комментарий
++/
+
+"another_dict" = @{
+    y = [y]
+    "nested_dict" = @{
+        nested_key1 = "nested_value1";
+    }
 }
